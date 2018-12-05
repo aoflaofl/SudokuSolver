@@ -1,6 +1,5 @@
 package com.spamalot.sudoku;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,7 +10,6 @@ import java.util.Set;
  *
  */
 class Cell {
-  static Set<Integer> candidates;
 
   /** Hold the Integer value of this cell. Null means empty. */
   private Integer value = null;
@@ -21,16 +19,6 @@ class Cell {
   private Set<Integer> columnSet;
   /** The Integers that have been solved on the Square this cell is in. */
   private Set<Integer> squareSet;
-
-  static void setCandidates(int size) {
-    if (candidates != null) {
-      Set<Integer> c = new HashSet<>(size);
-      for (int i = 0; i < size; i++) {
-        c.add(Integer.valueOf(i));
-      }
-      candidates = Collections.unmodifiableSet(c);
-    }
-  }
 
   /**
    * Set the Row Set for this Cell.
@@ -75,6 +63,12 @@ class Cell {
     }
   }
 
+  /**
+   * Set the value as an int. Does boxing.
+   * 
+   * @param v
+   *          int of value to set.
+   */
   public void setValue(final int v) {
     this.setValue(Integer.valueOf(v));
   }

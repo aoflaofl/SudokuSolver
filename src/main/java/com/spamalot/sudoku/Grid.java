@@ -120,4 +120,9 @@ class Grid {
 
   }
 
+  public Set<Integer> getAllCandidates() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
 }
