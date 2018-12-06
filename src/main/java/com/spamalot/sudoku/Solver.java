@@ -5,7 +5,7 @@ import java.util.Set;
 public class Solver {
 
   static void solveSingles(Grid g) {
-    Set<Integer> p = g.getAllCandidates();
+    Set<Integer> p = g.getAllPossibleCandidates();
   }
 
 }

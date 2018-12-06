@@ -1,6 +1,7 @@
 package com.spamalot.sudoku;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,6 +30,8 @@ class Grid {
   /** The size of this puzzle. */
   private int puzzleSize;
 
+  private static Set<Integer> possibleCandidates = null;
+
   /** Construct a Sudoku Grid with standard 9x9 size. */
   Grid() {
     this(DEFAULT_SUDOKU_SIZE);
@@ -38,8 +41,17 @@ class Grid {
     // TODO: Check that size is a square number.
     this.puzzleSize = size;
     initSets();
-
     initCells();
+  }
+
+  private void initPossibleCandidates(final int size) {
+    if (possibleCandidates == null) {
+      Set<Integer> x = new HashSet<Integer>();
+      for (int i = 0; i < size; i++) {
+        x.add(Integer.valueOf(i));
+      }
+      possibleCandidates = Collections.unmodifiableSet(x);
+    }
   }
 
   private void initSets() {
@@ -120,9 +132,9 @@ class Grid {
 
   }
 
-  public Set<Integer> getAllCandidates() {
-    // TODO Auto-generated method stub
-    return null;
+  public Set<Integer> getAllPossibleCandidates() {
+    initPossibleCandidates(puzzleSize);
+    return Grid.possibleCandidates;
   }
 
 }
