@@ -2,10 +2,28 @@ package com.spamalot.sudoku;
 
 import java.util.Set;
 
-public class Solver {
+/**
+ * Methods to solve a Sudoku puzzle.
+ * 
+ * @author gej
+ *
+ */
+public final class Solver {
+  /** Do not instantiate. */
+  private Solver() {
+  }
 
-  static void solveSingles(Grid g) {
+  /**
+   * Apply the single pattern to a Sudoku Grid.
+   * 
+   * @param g
+   *          Sudoku Grid to solve in
+   */
+  static void solveSingles(final Grid g) {
     Set<Integer> p = g.getAllPossibleCandidates();
+    for (Integer i : p) {
+      System.out.print(i);
+    }
   }
 
 }

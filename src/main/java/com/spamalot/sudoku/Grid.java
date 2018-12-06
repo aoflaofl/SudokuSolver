@@ -30,6 +30,10 @@ class Grid {
   /** The size of this puzzle. */
   private int puzzleSize;
 
+  /**
+   * Hold the Set of possible values for a cell in this Grid so it doesn't have to
+   * be recomputed all the time.
+   */
   private static Set<Integer> possibleCandidates = null;
 
   /** Construct a Sudoku Grid with standard 9x9 size. */
