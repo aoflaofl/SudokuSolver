@@ -60,6 +60,8 @@ class Cell {
     if (!setsContain(v)) {
       this.value = v;
       addValueToSets(v);
+    } else {
+      throw new java.lang.IllegalStateException("");
     }
   }
 
