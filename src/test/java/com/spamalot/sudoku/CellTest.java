@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Set;
 
 import static org.junit.Assert.*;
@@ -15,7 +14,7 @@ import static org.junit.Assert.*;
  * Unit test for simple App.
  */
 public class CellTest {
-  Grid g;
+  private Grid g;
 
   @BeforeClass
   public static void setup() {
@@ -24,7 +23,7 @@ public class CellTest {
 
   @Before
   public void setupThis() {
-    g = new Grid(9);
+    g = new Grid();
     g.getCell(1, 1).setValue(1);
   }
 

@@ -50,7 +50,7 @@ class Grid {
 
   private void initPossibleCandidates(final int size) {
     if (possibleCandidates == null) {
-      Set<Integer> x = new HashSet<Integer>();
+      Set<Integer> x = new HashSet<>();
       for (int i = 0; i < size; i++) {
         x.add(Integer.valueOf(i));
       }

@@ -73,7 +73,7 @@ class Cell {
       this.value = v;
       addValueToSets(v);
     } else {
-      throw new java.lang.IllegalStateException("");
+      throw new java.lang.IllegalStateException("This violates the rules of Sudoku.");
     }
   }
 
