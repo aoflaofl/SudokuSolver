@@ -10,6 +10,8 @@ import java.util.Set;
 
 import static org.junit.Assert.*;
 
+import com.spamalot.sudoku.Grid.Cell;
+
 /**
  * Unit test for simple App.
  */

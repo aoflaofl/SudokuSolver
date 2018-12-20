@@ -15,7 +15,7 @@ public final class Sudoku {
    * Start here.
    * 
    * @param args
-   *          Currently nothing.
+   *               Currently nothing.
    */
   public static void main(final String[] args) {
     Grid g = new Grid();
@@ -38,7 +38,7 @@ public final class Sudoku {
     g.initGrid(table);
     System.out.println(g);
 
-    g.scanForSingles();
+    Solver.scanForSingles(g);
   }
 
 }
